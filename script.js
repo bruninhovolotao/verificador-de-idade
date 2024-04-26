@@ -59,10 +59,30 @@ function verificar (){
                 img.src = 'img/foto-mulher-idosa.png';
             }
         }
+
         // Mostra o resultado na tela.
         res.innerHTML = `<p>Você é ${genero} e tem ${idade}.</p>`
 
         // cria imagem na div resultado.
         res.appendChild(img)
     }
+}
+
+function horario(){
+    // puxa a data atual
+    var data = new Date()
+    
+    // puxa a hora do relogio
+    var hora = data.getHours();
+    hora = 10
+    
+    // calcula a hora do relógio
+    if (hora >= 0 && hora < 12){
+        document.body.style.background = '#FCD7BD'
+    } else if (hora >= 12 && hora < 18) {
+        document.body.style.background = '#FD8703'
+    } else {
+        document.body.style.background = '#001D3D'
+    }
+
 }
